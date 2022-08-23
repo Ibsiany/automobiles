@@ -19,8 +19,8 @@ describe('Find all car controller test', () => {
     ]);
 
     const response = await request(app)
-      .get(`/car/all`)
-      .send({ color: 'xxx', brand: 'x' });
+      .get(`/car/all?color=ZZZ&brand=DD`)
+      .send();
 
     expect(response.status).toEqual(200);
     expect(response.body).toHaveLength(1);

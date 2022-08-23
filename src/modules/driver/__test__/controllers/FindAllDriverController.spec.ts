@@ -18,9 +18,7 @@ describe('Find all driver controller test', () => {
       new Driver(),
     ]);
 
-    const response = await request(app)
-      .get(`/driver/all`)
-      .send({ name: 'xxx' });
+    const response = await request(app).get(`/driver/all?name=XXX`).send();
 
     expect(response.status).toEqual(200);
     expect(response.body).toHaveLength(1);
@@ -31,7 +29,7 @@ describe('Find all driver controller test', () => {
       new Driver(),
     ]);
 
-    const response = await request(app).get(`/driver/all`).send({ name: null });
+    const response = await request(app).get(`/driver/all`).send();
 
     expect(response.status).toEqual(200);
     expect(response.body).toHaveLength(1);
