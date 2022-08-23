@@ -20,7 +20,18 @@ describe('Find all driver controller test', () => {
 
     const response = await request(app)
       .get(`/driver/all`)
-      .send({ color: 'xxx', brand: 'x' });
+      .send({ name: 'xxx' });
+
+    expect(response.status).toEqual(200);
+    expect(response.body).toHaveLength(1);
+  });
+
+  it('Should be able to find all drivers with name null', async () => {
+    await findAllCarServiceMock.prototype.execute.mockResolvedValueOnce([
+      new Driver(),
+    ]);
+
+    const response = await request(app).get(`/driver/all`).send({ name: null });
 
     expect(response.status).toEqual(200);
     expect(response.body).toHaveLength(1);

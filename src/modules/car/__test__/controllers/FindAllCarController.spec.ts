@@ -25,4 +25,17 @@ describe('Find all car controller test', () => {
     expect(response.status).toEqual(200);
     expect(response.body).toHaveLength(1);
   });
+
+  it('Should be able to find all cars', async () => {
+    await findAllCarServiceMock.prototype.execute.mockResolvedValueOnce([
+      new Car(),
+    ]);
+
+    const response = await request(app)
+      .get(`/car/all`)
+      .send({ color: null, brand: null });
+
+    expect(response.status).toEqual(200);
+    expect(response.body).toHaveLength(1);
+  });
 });
