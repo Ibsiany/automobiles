@@ -7,6 +7,6 @@ const router = Router();
 
 router.use('/car', car);
 router.use('/driver', driver);
-router.use('/car_use', carUse);
+router.use('/car-use', carUse);
 
 export { router };

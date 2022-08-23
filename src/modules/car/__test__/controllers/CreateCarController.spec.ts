@@ -23,7 +23,7 @@ describe('Create car controller test', () => {
     const brand = 'XXXXXX';
 
     const response = await request(app)
-      .post(`/car/create`)
+      .post(`/car`)
       .send({ board, color, brand });
 
     expect(response.status).toEqual(201);

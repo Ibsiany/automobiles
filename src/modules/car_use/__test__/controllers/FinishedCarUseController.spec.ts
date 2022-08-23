@@ -22,7 +22,7 @@ describe('Finished car use controller test', () => {
     );
 
     const response = await request(app)
-      .patch(`/car_use/${uuidV4()}`)
+      .patch(`/car-use/${uuidV4()}`)
       .send({ color: 'xxx' });
 
     expect(response.status).toEqual(200);

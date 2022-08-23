@@ -13,7 +13,7 @@ const findByIdController = new FindByIdController();
 const findAllCarController = new FindAllCarController();
 const updateCarController = new UpdateCarController();
 
-car.post('/create', createCarController.handle);
+car.post('/', createCarController.handle);
 car.delete('/delete', deleteCarController.handle);
 car.get('/all', findAllCarController.handle);
 car.get('/car/:id', findByIdController.handle);

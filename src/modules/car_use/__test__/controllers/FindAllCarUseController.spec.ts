@@ -19,7 +19,7 @@ describe('Find all car use controller test', () => {
     ]);
 
     const response = await request(app)
-      .get(`/car_use/all`)
+      .get(`/car-use/all`)
       .send({ color: 'xxx', brand: 'x' });
 
     expect(response.status).toEqual(200);

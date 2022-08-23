@@ -9,7 +9,7 @@ const createCarUseController = new CreateCarUseController();
 const findAllCarUseController = new FindAllCarUseController();
 const finishedCarUseController = new FinishedCarUseController();
 
-carUse.post('/create', createCarUseController.handle);
+carUse.post('/', createCarUseController.handle);
 carUse.get('/all', findAllCarUseController.handle);
 carUse.patch('/:id', finishedCarUseController.handle);
 

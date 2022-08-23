@@ -18,7 +18,7 @@ describe('Create car use controller test', () => {
       new CarUse(),
     );
 
-    const response = await request(app).post(`/car_use/create`).send({
+    const response = await request(app).post(`/car-use/`).send({
       car_id: '123456',
       driver_id: '123456',
       reason: 'XXX',
