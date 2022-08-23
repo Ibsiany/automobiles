@@ -13,8 +13,8 @@ const findByIdController = new FindByIdController();
 const findAllDriverController = new FindAllDriverController();
 const updateDriverController = new UpdateDriverController();
 
-driver.post('/create', createDriverController.handle);
-driver.delete('/delete', deleteDriverController.handle);
+driver.post('/', createDriverController.handle);
+driver.delete('/', deleteDriverController.handle);
 driver.get('/all', findAllDriverController.handle);
 driver.get('/driver/:id', findByIdController.handle);
 driver.patch('/:id', updateDriverController.handle);

@@ -20,7 +20,7 @@ describe('Create driver controller test', () => {
 
     const name = 'XXX';
 
-    const response = await request(app).post(`/driver/create`).send({ name });
+    const response = await request(app).post(`/driver`).send({ name });
 
     expect(response.status).toEqual(201);
   });

@@ -15,9 +15,7 @@ describe('Delete driver controller test', () => {
   it('Should be able to delete driver', async () => {
     await deleteCarControllerMock.prototype.execute.mockResolvedValueOnce();
 
-    const response = await request(app)
-      .delete(`/driver/delete`)
-      .send({ id: 'x' });
+    const response = await request(app).delete(`/driver`).send({ id: 'x' });
 
     expect(response.status).toEqual(200);
   });
