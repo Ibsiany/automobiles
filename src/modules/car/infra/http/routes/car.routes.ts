@@ -15,8 +15,8 @@ const updateCarController = new UpdateCarController();
 
 car.post('/create', createCarController.handle);
 car.delete('/delete', deleteCarController.handle);
-car.get('/:id', findByIdController.handle);
 car.get('/all', findAllCarController.handle);
+car.get('/car/:id', findByIdController.handle);
 car.patch('/:id', updateCarController.handle);
 
 export { car };

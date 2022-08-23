@@ -8,13 +8,15 @@ const createCarServiceMock = CreateCarService as jest.MockedClass<
   typeof CreateCarService
 >;
 
-describe('Create disconnected trigger subscription controller test', () => {
+describe('Create car controller test', () => {
   beforeEach(async () => {
     createCarServiceMock.mockClear();
   });
 
-  it('Should be able to create a subscription disconnected active trigger', async () => {
-    createCarServiceMock.prototype.execute.mockResolvedValueOnce(new Car());
+  it('Should be able to create a car', async () => {
+    await createCarServiceMock.prototype.execute.mockResolvedValueOnce(
+      new Car(),
+    );
 
     const board = 'XXX';
     const color = 'blue';
