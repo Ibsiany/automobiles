@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { CreateCarController } from '../controllers/CreateCarController';
-import { DeleteCarController } from '../controllers/DeleteCarService';
+import { DeleteCarController } from '../controllers/DeleteCarController';
 import { FindAllCarController } from '../controllers/FindAllCarController';
 import { FindByIdController } from '../controllers/FindByIdController';
 import { UpdateCarController } from '../controllers/UpdateCarController';

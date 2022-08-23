@@ -9,8 +9,8 @@ export class FindAllCarController {
     const findAllCarService = container.resolve(FindAllCarService);
 
     const cars = await findAllCarService.execute({
-      color: String(color),
-      brand: String(brand),
+      color: color ? String(color) : null,
+      brand: brand ? String(brand) : null,
     });
 
     return response.json(cars);
