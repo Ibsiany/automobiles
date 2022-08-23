@@ -15,15 +15,17 @@ describe('Update driver controller test', () => {
   });
 
   it('Should be able to find by id', async () => {
-    const car = new Driver();
+    const driver = new Driver();
 
-    await updateDriverServiceMock.prototype.execute.mockResolvedValueOnce(car);
+    await updateDriverServiceMock.prototype.execute.mockResolvedValueOnce(
+      driver,
+    );
 
     const response = await request(app)
       .patch(`/driver/${uuidV4()}`)
       .send({ color: 'xxx' });
 
     expect(response.status).toEqual(200);
-    expect(response.body).toEqual(car);
+    expect(response.body).toEqual(driver);
   });
 });
